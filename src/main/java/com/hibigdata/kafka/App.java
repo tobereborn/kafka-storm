@@ -1,4 +1,4 @@
-package com.hibigdata.kafka_storm;
+package com.hibigdata.kafka;
 
 /**
  * Hello world!

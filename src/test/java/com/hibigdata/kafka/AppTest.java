@@ -1,4 +1,4 @@
-package com.hibigdata.kafka_storm;
+package com.hibigdata.kafka;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
