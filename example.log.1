@@ -1,0 +1,766 @@
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9001
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to 
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Connecting to zookeeper on 
+INFO ZkClient-EventThread-12- org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:host.name=weizhenjin-NB0.tencent.com
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_91
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.home=C:\Program Files\Java\jdk1.8.0_91\jre
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=D:\dev\git\kafka-storm\target\classes;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka_2.10\0.8.2.0\kafka_2.10-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar;C:\Users\weizhenjin\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\weizhenjin\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\weizhenjin\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\weizhenjin\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\weizhenjin\.m2\repository\net\sf\jopt-simple\jopt-simple\3.2\jopt-simple-3.2.jar;C:\Users\weizhenjin\.m2\repository\com\101tec\zkclient\0.3\zkclient-0.3.jar;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka-clients\0.8.2.0\kafka-clients-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\weizhenjin\.m2\repository\net\jpountz\lz4\lz4\1.2.0\lz4-1.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\xerial\snappy\snappy-java\1.1.1.6\snappy-java-1.1.1.6.jar
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\;D:\软件\maven\apache-maven-3.3.9\bin\;D:\software\eclipse\eclipse-jee-mars-2-win32-x86_64\eclipse;;.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\WEIZHE~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 7
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.1
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.name=weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.dir=D:\dev\git\kafka-storm
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString= sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@365c30cc
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO ZkClient-EventThread-12- org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main org.apache.zookeeper.ZooKeeper - Session: 0x0 closed
+INFO main-EventThread org.apache.zookeeper.ClientCnxn - EventThread shut down
+FATAL main kafka.server.KafkaServer - [Kafka Server 9001], Fatal error during KafkaServer startup. Prepare to shutdown
+org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 6000
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:880)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:84)
+	at kafka.server.KafkaServer.initZk(KafkaServer.scala:157)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:82)
+	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:29)
+	at com.hibigdata.kafka.MiniKafkaCluster.startup(MiniKafkaCluster.java:37)
+	at com.hibigdata.kafka.MiniKafkaCluster.main(MiniKafkaCluster.java:55)
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shutting down
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shut down completed
+FATAL main kafka.server.KafkaServerStartable - Fatal error during KafkaServerStartable startup. Prepare to shutdown
+org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 6000
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:880)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:84)
+	at kafka.server.KafkaServer.initZk(KafkaServer.scala:157)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:82)
+	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:29)
+	at com.hibigdata.kafka.MiniKafkaCluster.startup(MiniKafkaCluster.java:37)
+	at com.hibigdata.kafka.MiniKafkaCluster.main(MiniKafkaCluster.java:55)
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:host.name=weizhenjin-NB0.tencent.com
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.version=1.8.0_91
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.home=C:\Program Files\Java\jdk1.8.0_91\jre
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.class.path=D:\dev\git\kafka-storm\target\classes;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka_2.10\0.8.2.0\kafka_2.10-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar;C:\Users\weizhenjin\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\weizhenjin\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\weizhenjin\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\weizhenjin\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\weizhenjin\.m2\repository\net\sf\jopt-simple\jopt-simple\3.2\jopt-simple-3.2.jar;C:\Users\weizhenjin\.m2\repository\com\101tec\zkclient\0.3\zkclient-0.3.jar;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka-clients\0.8.2.0\kafka-clients-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\weizhenjin\.m2\repository\net\jpountz\lz4\lz4\1.2.0\lz4-1.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\xerial\snappy\snappy-java\1.1.1.6\snappy-java-1.1.1.6.jar
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.library.path=C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\;D:\软件\maven\apache-maven-3.3.9\bin\;D:\software\eclipse\eclipse-jee-mars-2-win32-x86_64\eclipse;;.
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.io.tmpdir=C:\Users\WEIZHE~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.name=Windows 7
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.arch=amd64
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.version=6.1
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.name=weizhenjin
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.home=C:\Users\weizhenjin
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.dir=D:\dev\git\kafka-storm
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Created server with tickTime 500 minSessionTimeout 1000 maxSessionTimeout 10000 datadir zk\snapshots\version-2 snapdir zk\logs\version-2
+INFO main org.apache.zookeeper.server.NIOServerCnxnFactory - binding to port localhost/127.0.0.1:2181
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - NIOServerCnxn factory exited run method
+INFO main org.apache.zookeeper.server.ZooKeeperServer - shutting down
+INFO main org.apache.zookeeper.server.SessionTrackerImpl - Shutting down
+INFO main org.apache.zookeeper.server.PrepRequestProcessor - Shutting down
+INFO main org.apache.zookeeper.server.SyncRequestProcessor - Shutting down
+INFO SyncThread:0 org.apache.zookeeper.server.SyncRequestProcessor - SyncRequestProcessor exited!
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - PrepRequestProcessor exited loop!
+INFO main org.apache.zookeeper.server.FinalRequestProcessor - shutdown of request processor complete
+INFO SessionTracker org.apache.zookeeper.server.SessionTrackerImpl - SessionTrackerImpl exited loop!
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9001
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to localhost:2181
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Connecting to zookeeper on localhost:2181
+INFO ZkClient-EventThread-12-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:host.name=weizhenjin-NB0.tencent.com
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_91
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.home=C:\Program Files\Java\jdk1.8.0_91\jre
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=D:\dev\git\kafka-storm\target\classes;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka_2.10\0.8.2.0\kafka_2.10-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar;C:\Users\weizhenjin\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\weizhenjin\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\weizhenjin\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\weizhenjin\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\weizhenjin\.m2\repository\net\sf\jopt-simple\jopt-simple\3.2\jopt-simple-3.2.jar;C:\Users\weizhenjin\.m2\repository\com\101tec\zkclient\0.3\zkclient-0.3.jar;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka-clients\0.8.2.0\kafka-clients-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\weizhenjin\.m2\repository\net\jpountz\lz4\lz4\1.2.0\lz4-1.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\xerial\snappy\snappy-java\1.1.1.6\snappy-java-1.1.1.6.jar
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\;D:\软件\maven\apache-maven-3.3.9\bin\;D:\software\eclipse\eclipse-jee-mars-2-win32-x86_64\eclipse;;.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\WEIZHE~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 7
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.1
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.name=weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.dir=D:\dev\git\kafka-storm
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@76329302
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO ZkClient-EventThread-12-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main org.apache.zookeeper.ZooKeeper - Session: 0x0 closed
+INFO main-EventThread org.apache.zookeeper.ClientCnxn - EventThread shut down
+FATAL main kafka.server.KafkaServer - [Kafka Server 9001], Fatal error during KafkaServer startup. Prepare to shutdown
+org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 6000
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:880)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:84)
+	at kafka.server.KafkaServer.initZk(KafkaServer.scala:157)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:82)
+	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:29)
+	at com.hibigdata.kafka.MiniKafkaCluster.startup(MiniKafkaCluster.java:37)
+	at com.hibigdata.kafka.MiniKafkaCluster.main(MiniKafkaCluster.java:57)
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shutting down
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shut down completed
+FATAL main kafka.server.KafkaServerStartable - Fatal error during KafkaServerStartable startup. Prepare to shutdown
+org.I0Itec.zkclient.exception.ZkTimeoutException: Unable to connect to zookeeper server within timeout: 6000
+	at org.I0Itec.zkclient.ZkClient.connect(ZkClient.java:880)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:98)
+	at org.I0Itec.zkclient.ZkClient.<init>(ZkClient.java:84)
+	at kafka.server.KafkaServer.initZk(KafkaServer.scala:157)
+	at kafka.server.KafkaServer.startup(KafkaServer.scala:82)
+	at kafka.server.KafkaServerStartable.startup(KafkaServerStartable.scala:29)
+	at com.hibigdata.kafka.MiniKafkaCluster.startup(MiniKafkaCluster.java:37)
+	at com.hibigdata.kafka.MiniKafkaCluster.main(MiniKafkaCluster.java:57)
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:host.name=weizhenjin-NB0.tencent.com
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.version=1.8.0_91
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.home=C:\Program Files\Java\jdk1.8.0_91\jre
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.class.path=D:\dev\git\kafka-storm\target\classes;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka_2.10\0.8.2.0\kafka_2.10-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar;C:\Users\weizhenjin\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\weizhenjin\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\weizhenjin\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\weizhenjin\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\weizhenjin\.m2\repository\net\sf\jopt-simple\jopt-simple\3.2\jopt-simple-3.2.jar;C:\Users\weizhenjin\.m2\repository\com\101tec\zkclient\0.3\zkclient-0.3.jar;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka-clients\0.8.2.0\kafka-clients-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\weizhenjin\.m2\repository\net\jpountz\lz4\lz4\1.2.0\lz4-1.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\xerial\snappy\snappy-java\1.1.1.6\snappy-java-1.1.1.6.jar
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.library.path=C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\;D:\软件\maven\apache-maven-3.3.9\bin\;D:\software\eclipse\eclipse-jee-mars-2-win32-x86_64\eclipse;;.
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.io.tmpdir=C:\Users\WEIZHE~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.name=Windows 7
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.arch=amd64
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.version=6.1
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.name=weizhenjin
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.home=C:\Users\weizhenjin
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.dir=D:\dev\git\kafka-storm
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Created server with tickTime 500 minSessionTimeout 1000 maxSessionTimeout 10000 datadir zk\snapshots\version-2 snapdir zk\logs\version-2
+INFO main org.apache.zookeeper.server.NIOServerCnxnFactory - binding to port localhost/127.0.0.1:2181
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9001
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to localhost:2181
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Connecting to zookeeper on localhost:2181
+INFO ZkClient-EventThread-16-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:host.name=weizhenjin-NB0.tencent.com
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_91
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.home=C:\Program Files\Java\jdk1.8.0_91\jre
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=D:\dev\git\kafka-storm\target\classes;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka_2.10\0.8.2.0\kafka_2.10-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar;C:\Users\weizhenjin\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\weizhenjin\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\weizhenjin\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\weizhenjin\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\weizhenjin\.m2\repository\net\sf\jopt-simple\jopt-simple\3.2\jopt-simple-3.2.jar;C:\Users\weizhenjin\.m2\repository\com\101tec\zkclient\0.3\zkclient-0.3.jar;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka-clients\0.8.2.0\kafka-clients-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\weizhenjin\.m2\repository\net\jpountz\lz4\lz4\1.2.0\lz4-1.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\xerial\snappy\snappy-java\1.1.1.6\snappy-java-1.1.1.6.jar
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\;D:\软件\maven\apache-maven-3.3.9\bin\;D:\software\eclipse\eclipse-jee-mars-2-win32-x86_64\eclipse;;.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\WEIZHE~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 7
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.1
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.name=weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.dir=D:\dev\git\kafka-storm
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@11dc3715
+INFO main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+WARN main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:9034
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:9034
+INFO SyncThread:0 org.apache.zookeeper.server.persistence.FileTxnLog - Creating new log file: log.1
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x1549f805a080000, negotiated timeout = 6000
+INFO SyncThread:0 org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1549f805a080000 with negotiated timeout 6000 for client /127.0.0.1:9034
+INFO main-EventThread org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080000 type:create cxid:0x4 zxid:0x3 txntype:-1 reqpath:n/a Error Path:/brokers Error:KeeperErrorCode = NoNode for /brokers
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080000 type:create cxid:0xa zxid:0x7 txntype:-1 reqpath:n/a Error Path:/config Error:KeeperErrorCode = NoNode for /config
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080000 type:create cxid:0x10 zxid:0xb txntype:-1 reqpath:n/a Error Path:/admin Error:KeeperErrorCode = NoNode for /admin
+INFO main kafka.log.LogManager - Loading logs.
+INFO main kafka.log.LogManager - Logs loading complete.
+INFO main kafka.log.LogManager - Starting log cleanup with a period of 300000 ms.
+INFO main kafka.log.LogManager - Starting log flusher with a default period of 9223372036854775807 ms.
+INFO main kafka.network.Acceptor - Awaiting socket connections on localhost:9001.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9001], Started
+INFO main kafka.utils.Mx4jLoader$ - Will not load MX4J, mx4j-tools.jar is not in the classpath
+INFO main kafka.controller.KafkaController - [Controller 9001]: Controller starting up
+INFO main kafka.server.ZookeeperLeaderElector - 9001 successfully elected as leader
+INFO main kafka.controller.KafkaController - [Controller 9001]: Broker 9001 starting become controller state transition
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080000 type:setData cxid:0x1a zxid:0xf txntype:-1 reqpath:n/a Error Path:/controller_epoch Error:KeeperErrorCode = NoNode for /controller_epoch
+INFO main kafka.controller.KafkaController - [Controller 9001]: Controller 9001 incremented epoch to 1
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions undergoing preferred replica election: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions that completed preferred replica election: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Resuming preferred replica election for partitions: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions being reassigned: Map()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions already reassigned: List()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Resuming reassignment of partitions: Map()
+INFO main kafka.controller.KafkaController - [Controller 9001]: List of topics to be deleted: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: List of topics ineligible for deletion: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Currently active brokers in the cluster: Set()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Currently shutting brokers in the cluster: Set()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Current list of topics in the cluster: Set()
+INFO main kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9001]: Started replica state machine with initial state -> Map()
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Started partition state machine with initial state -> Map()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Broker 9001 is ready to serve as the new controller with epoch 1
+INFO main kafka.controller.KafkaController - [Controller 9001]: Starting preferred replica leader election for partitions 
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Invoking state change to OnlinePartition for partitions 
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080000 type:delete cxid:0x27 zxid:0x11 txntype:-1 reqpath:n/a Error Path:/admin/preferred_replica_election Error:KeeperErrorCode = NoNode for /admin/preferred_replica_election
+INFO main kafka.controller.KafkaController - [Controller 9001]: starting the partition rebalance scheduler
+INFO main kafka.controller.KafkaController - [Controller 9001]: Controller startup complete
+INFO main kafka.utils.ZkUtils$ - Registered broker 9001 at path /brokers/ids/9001 with address localhost:9001.
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], started
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9002
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9002
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9002
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to localhost:2181
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], Connecting to zookeeper on localhost:2181
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@574b560f
+INFO ZkClient-EventThread-43-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:9045
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:9045
+INFO SyncThread:0 org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1549f805a080001 with negotiated timeout 6000 for client /127.0.0.1:9045
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x1549f805a080001, negotiated timeout = 6000
+INFO main-EventThread org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+INFO main kafka.log.LogManager - Loading logs.
+INFO main kafka.log.LogManager - Logs loading complete.
+INFO main kafka.log.LogManager - Starting log cleanup with a period of 300000 ms.
+INFO main kafka.log.LogManager - Starting log flusher with a default period of 9223372036854775807 ms.
+INFO main kafka.network.Acceptor - Awaiting socket connections on localhost:9002.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9002], Started
+INFO main kafka.utils.Mx4jLoader$ - Will not load MX4J, mx4j-tools.jar is not in the classpath
+INFO main kafka.controller.KafkaController - [Controller 9002]: Controller starting up
+INFO ZkClient-EventThread-16-localhost:2181 kafka.server.ZookeeperLeaderElector$LeaderChangeListener - New leader is 9001
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9001
+INFO main kafka.controller.KafkaController - [Controller 9002]: Controller startup complete
+INFO main kafka.utils.ZkUtils$ - Registered broker 9002 at path /brokers/ids/9002 with address localhost:9002.
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], started
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9003
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9003
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9003
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to localhost:2181
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], Connecting to zookeeper on localhost:2181
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@3cc1435c
+INFO ZkClient-EventThread-67-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: 9001, deleted brokers: , all live brokers: 9001
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Controller 9001 connected to id:9001,host:localhost,port:9001 for sending state change requests
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: New broker startup callback for 9001
+INFO Controller-9001-to-broker-9001-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Starting 
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9001,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: 9002, deleted brokers: , all live brokers: 9001,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Controller 9001 connected to id:9002,host:localhost,port:9002 for sending state change requests
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: New broker startup callback for 9002
+INFO Controller-9001-to-broker-9002-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Starting 
+WARN main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:9059
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:9059
+INFO SyncThread:0 org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1549f805a080002 with negotiated timeout 6000 for client /127.0.0.1:9059
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x1549f805a080002, negotiated timeout = 6000
+INFO main-EventThread org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+INFO main kafka.log.LogManager - Loading logs.
+INFO main kafka.log.LogManager - Logs loading complete.
+INFO main kafka.log.LogManager - Starting log cleanup with a period of 300000 ms.
+INFO main kafka.log.LogManager - Starting log flusher with a default period of 9223372036854775807 ms.
+INFO main kafka.network.Acceptor - Awaiting socket connections on localhost:9003.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9003], Started
+INFO main kafka.utils.Mx4jLoader$ - Will not load MX4J, mx4j-tools.jar is not in the classpath
+INFO main kafka.controller.KafkaController - [Controller 9003]: Controller starting up
+INFO main kafka.controller.KafkaController - [Controller 9003]: Controller startup complete
+INFO main kafka.utils.ZkUtils$ - Registered broker 9003 at path /brokers/ids/9003 with address localhost:9003.
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], started
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9003,9001,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: 9003, deleted brokers: , all live brokers: 9003,9001,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Controller 9001 connected to id:9003,host:localhost,port:9003 for sending state change requests
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: New broker startup callback for 9003
+INFO Controller-9001-to-broker-9003-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Starting 
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shutting down
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Starting controlled shutdown
+INFO kafka-request-handler-0 kafka.controller.KafkaController - [Controller 9001]: Shutting down broker 9001
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Controlled shutdown succeeded
+INFO main kafka.utils.ZkUtils$ - Deregistered broker 9001 at path /brokers/ids/9001.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9001], Shutting down
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9003,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: , deleted brokers: 9001, all live brokers: 9003,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Shutting down
+INFO Controller-9001-to-broker-9001-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Stopped 
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Shutdown completed
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: Broker failure callback for 9001
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: Removed ArrayBuffer(9001) from list of shutting down brokers.
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Invoking state change to OfflinePartition for partitions 
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9001], Shutdown completed
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9001], shutting down
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9001], shut down completely
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9001]: Shut down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9001] shutting down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9001] shutdown completed
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9001]: Shut down completely
+INFO main kafka.log.LogManager - Shutting down.
+INFO main kafka.log.LogManager - Shutdown complete.
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Stopped partition state machine
+INFO main kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9001]: Stopped replica state machine
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Shutting down
+INFO kafka-network-thread-9003-0 kafka.network.Processor - Closing socket connection to /127.0.0.1.
+INFO Controller-9001-to-broker-9003-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Stopped 
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Shutdown completed
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Shutting down
+INFO Controller-9001-to-broker-9002-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Stopped 
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Shutdown completed
+INFO ZkClient-EventThread-16-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+INFO kafka-network-thread-9002-0 kafka.network.Processor - Closing socket connection to /127.0.0.1.
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1549f805a080000
+INFO main org.apache.zookeeper.ZooKeeper - Session: 0x1549f805a080000 closed
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shut down completed
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], shutting down
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], Starting controlled shutdown
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:9034 which had sessionid 0x1549f805a080000
+INFO main-EventThread org.apache.zookeeper.ClientCnxn - EventThread shut down
+WARN main kafka.utils.Utils$ - Controller doesn't exist
+kafka.common.KafkaException: Controller doesn't exist
+	at kafka.utils.ZkUtils$.getController(ZkUtils.scala:67)
+	at kafka.server.KafkaServer.kafka$server$KafkaServer$$controlledShutdown(KafkaServer.scala:194)
+	at kafka.server.KafkaServer$$anonfun$shutdown$1.apply$mcV$sp(KafkaServer.scala:269)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowWarn(Logging.scala:92)
+	at kafka.utils.Utils$.swallowWarn(Utils.scala:45)
+	at kafka.utils.Logging$class.swallow(Logging.scala:94)
+	at kafka.utils.Utils$.swallow(Utils.scala:45)
+	at kafka.server.KafkaServer.shutdown(KafkaServer.scala:269)
+	at kafka.server.KafkaServerStartable.shutdown(KafkaServerStartable.scala:42)
+	at com.hibigdata.kafka.MiniKafkaCluster.shutdown(MiniKafkaCluster.java:45)
+	at com.hibigdata.kafka.MiniKafkaCluster.main(MiniKafkaCluster.java:64)
+INFO main kafka.utils.ZkUtils$ - Deregistered broker 9002 at path /brokers/ids/9002.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9002], Shutting down
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9002], Shutdown completed
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9002], shutting down
+INFO ZkClient-EventThread-43-localhost:2181 kafka.server.ZookeeperLeaderElector - 9002 successfully elected as leader
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9002], shut down completely
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Broker 9002 starting become controller state transition
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080002 type:create cxid:0x12 zxid:0x1b txntype:-1 reqpath:n/a Error Path:/controller Error:KeeperErrorCode = NodeExists for /controller
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Initialized controller epoch to 1 and zk version 0
+INFO ZkClient-EventThread-67-localhost:2181 kafka.utils.ZkUtils$ - conflict in /controller data: {"version":1,"brokerid":9003,"timestamp":"1462964878389"} stored data: {"version":1,"brokerid":9002,"timestamp":"1462964878389"}
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Controller 9002 incremented epoch to 2
+INFO ZkClient-EventThread-67-localhost:2181 kafka.server.ZookeeperLeaderElector$LeaderChangeListener - New leader is 9002
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.RequestSendThread - [Controller-9002-to-broker-9003-send-thread], Controller 9002 connected to id:9003,host:localhost,port:9003 for sending state change requests
+INFO Controller-9002-to-broker-9003-send-thread kafka.controller.RequestSendThread - [Controller-9002-to-broker-9003-send-thread], Starting 
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Partitions undergoing preferred replica election: 
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Partitions that completed preferred replica election: 
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Resuming preferred replica election for partitions: 
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Partitions being reassigned: Map()
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Partitions already reassigned: List()
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Resuming reassignment of partitions: Map()
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: List of topics to be deleted: 
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: List of topics ineligible for deletion: 
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Currently active brokers in the cluster: Set(9003)
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Currently shutting brokers in the cluster: Set()
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Current list of topics in the cluster: Set()
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9002]: Started replica state machine with initial state -> Map()
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9002]: Started partition state machine with initial state -> Map()
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Broker 9002 is ready to serve as the new controller with epoch 2
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: Starting preferred replica leader election for partitions 
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9002]: Invoking state change to OnlinePartition for partitions 
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080001 type:delete cxid:0x24 zxid:0x1d txntype:-1 reqpath:n/a Error Path:/admin/preferred_replica_election Error:KeeperErrorCode = NoNode for /admin/preferred_replica_election
+INFO ZkClient-EventThread-43-localhost:2181 kafka.controller.KafkaController - [Controller 9002]: starting the partition rebalance scheduler
+INFO ZkClient-EventThread-43-localhost:2181 kafka.server.ZookeeperLeaderElector$LeaderChangeListener - New leader is 9002
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9002]: Shut down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9002] shutting down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9002] shutdown completed
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9002]: Shut down completely
+INFO main kafka.log.LogManager - Shutting down.
+INFO main kafka.log.LogManager - Shutdown complete.
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9002]: Stopped partition state machine
+INFO main kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9002]: Stopped replica state machine
+INFO main kafka.controller.RequestSendThread - [Controller-9002-to-broker-9003-send-thread], Shutting down
+INFO Controller-9002-to-broker-9003-send-thread kafka.controller.RequestSendThread - [Controller-9002-to-broker-9003-send-thread], Stopped 
+INFO kafka-network-thread-9003-1 kafka.network.Processor - Closing socket connection to /127.0.0.1.
+INFO main kafka.controller.RequestSendThread - [Controller-9002-to-broker-9003-send-thread], Shutdown completed
+INFO ZkClient-EventThread-43-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1549f805a080001
+INFO main org.apache.zookeeper.ZooKeeper - Session: 0x1549f805a080001 closed
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:9045 which had sessionid 0x1549f805a080001
+INFO main-EventThread org.apache.zookeeper.ClientCnxn - EventThread shut down
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], shut down completed
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], shutting down
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], Starting controlled shutdown
+WARN main kafka.utils.Utils$ - Controller doesn't exist
+kafka.common.KafkaException: Controller doesn't exist
+	at kafka.utils.ZkUtils$.getController(ZkUtils.scala:67)
+	at kafka.server.KafkaServer.kafka$server$KafkaServer$$controlledShutdown(KafkaServer.scala:194)
+	at kafka.server.KafkaServer$$anonfun$shutdown$1.apply$mcV$sp(KafkaServer.scala:269)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowWarn(Logging.scala:92)
+	at kafka.utils.Utils$.swallowWarn(Utils.scala:45)
+	at kafka.utils.Logging$class.swallow(Logging.scala:94)
+	at kafka.utils.Utils$.swallow(Utils.scala:45)
+	at kafka.server.KafkaServer.shutdown(KafkaServer.scala:269)
+	at kafka.server.KafkaServerStartable.shutdown(KafkaServerStartable.scala:42)
+	at com.hibigdata.kafka.MiniKafkaCluster.shutdown(MiniKafkaCluster.java:45)
+	at com.hibigdata.kafka.MiniKafkaCluster.main(MiniKafkaCluster.java:64)
+INFO main kafka.utils.ZkUtils$ - Deregistered broker 9003 at path /brokers/ids/9003.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9003], Shutting down
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9003], Shutdown completed
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9003], shutting down
+INFO ZkClient-EventThread-67-localhost:2181 kafka.server.ZookeeperLeaderElector - 9003 successfully elected as leader
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Broker 9003 starting become controller state transition
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9003], shut down completely
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Initialized controller epoch to 2 and zk version 1
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Controller 9003 incremented epoch to 3
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions undergoing preferred replica election: 
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions that completed preferred replica election: 
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Resuming preferred replica election for partitions: 
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions being reassigned: Map()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions already reassigned: List()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Resuming reassignment of partitions: Map()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: List of topics to be deleted: 
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: List of topics ineligible for deletion: 
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Currently active brokers in the cluster: Set()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Currently shutting brokers in the cluster: Set()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Current list of topics in the cluster: Set()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9003]: Started replica state machine with initial state -> Map()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9003]: Started partition state machine with initial state -> Map()
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Broker 9003 is ready to serve as the new controller with epoch 3
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Starting preferred replica leader election for partitions 
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9003]: Invoking state change to OnlinePartition for partitions 
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f805a080002 type:delete cxid:0x2c zxid:0x22 txntype:-1 reqpath:n/a Error Path:/admin/preferred_replica_election Error:KeeperErrorCode = NoNode for /admin/preferred_replica_election
+INFO ZkClient-EventThread-67-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: starting the partition rebalance scheduler
+INFO ZkClient-EventThread-67-localhost:2181 kafka.server.ZookeeperLeaderElector$LeaderChangeListener - New leader is 9003
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9003]: Shut down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9003] shutting down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9003] shutdown completed
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9003]: Shut down completely
+INFO main kafka.log.LogManager - Shutting down.
+INFO main kafka.log.LogManager - Shutdown complete.
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9003]: Stopped partition state machine
+INFO main kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9003]: Stopped replica state machine
+INFO ZkClient-EventThread-67-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1549f805a080002
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:9059 which had sessionid 0x1549f805a080002
+INFO main org.apache.zookeeper.ZooKeeper - Session: 0x1549f805a080002 closed
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], shut down completed
+INFO main-EventThread org.apache.zookeeper.ClientCnxn - EventThread shut down
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - NIOServerCnxn factory exited run method
+INFO main org.apache.zookeeper.server.ZooKeeperServer - shutting down
+INFO main org.apache.zookeeper.server.SessionTrackerImpl - Shutting down
+INFO main org.apache.zookeeper.server.PrepRequestProcessor - Shutting down
+INFO main org.apache.zookeeper.server.SyncRequestProcessor - Shutting down
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - PrepRequestProcessor exited loop!
+INFO SyncThread:0 org.apache.zookeeper.server.SyncRequestProcessor - SyncRequestProcessor exited!
+INFO main org.apache.zookeeper.server.FinalRequestProcessor - shutdown of request processor complete
+INFO SessionTracker org.apache.zookeeper.server.SessionTrackerImpl - SessionTrackerImpl exited loop!
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:host.name=weizhenjin-NB0.tencent.com
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.version=1.8.0_91
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.home=C:\Program Files\Java\jdk1.8.0_91\jre
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.class.path=D:\dev\git\kafka-storm\target\classes;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka_2.10\0.8.2.0\kafka_2.10-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar;C:\Users\weizhenjin\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\weizhenjin\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\weizhenjin\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\weizhenjin\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\weizhenjin\.m2\repository\net\sf\jopt-simple\jopt-simple\3.2\jopt-simple-3.2.jar;C:\Users\weizhenjin\.m2\repository\com\101tec\zkclient\0.3\zkclient-0.3.jar;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka-clients\0.8.2.0\kafka-clients-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\weizhenjin\.m2\repository\net\jpountz\lz4\lz4\1.2.0\lz4-1.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\xerial\snappy\snappy-java\1.1.1.6\snappy-java-1.1.1.6.jar
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.library.path=C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\;D:\软件\maven\apache-maven-3.3.9\bin\;D:\software\eclipse\eclipse-jee-mars-2-win32-x86_64\eclipse;;.
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.io.tmpdir=C:\Users\WEIZHE~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.name=Windows 7
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.arch=amd64
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:os.version=6.1
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.name=weizhenjin
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.home=C:\Users\weizhenjin
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Server environment:user.dir=D:\dev\git\kafka-storm
+INFO main org.apache.zookeeper.server.ZooKeeperServer - Created server with tickTime 500 minSessionTimeout 1000 maxSessionTimeout 10000 datadir zk\snapshots\version-2 snapdir zk\logs\version-2
+INFO main org.apache.zookeeper.server.NIOServerCnxnFactory - binding to port localhost/127.0.0.1:2181
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9001
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9001
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to localhost:2181
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Connecting to zookeeper on localhost:2181
+INFO ZkClient-EventThread-16-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:host.name=weizhenjin-NB0.tencent.com
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_91
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.home=C:\Program Files\Java\jdk1.8.0_91\jre
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=D:\dev\git\kafka-storm\target\classes;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka_2.10\0.8.2.0\kafka_2.10-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\scala-lang\scala-library\2.10.4\scala-library-2.10.4.jar;C:\Users\weizhenjin\.m2\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\weizhenjin\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\weizhenjin\.m2\repository\jline\jline\0.9.94\jline-0.9.94.jar;C:\Users\weizhenjin\.m2\repository\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;C:\Users\weizhenjin\.m2\repository\net\sf\jopt-simple\jopt-simple\3.2\jopt-simple-3.2.jar;C:\Users\weizhenjin\.m2\repository\com\101tec\zkclient\0.3\zkclient-0.3.jar;C:\Users\weizhenjin\.m2\repository\org\apache\kafka\kafka-clients\0.8.2.0\kafka-clients-0.8.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\slf4j\slf4j-api\1.7.6\slf4j-api-1.7.6.jar;C:\Users\weizhenjin\.m2\repository\net\jpountz\lz4\lz4\1.2.0\lz4-1.2.0.jar;C:\Users\weizhenjin\.m2\repository\org\xerial\snappy\snappy-java\1.1.1.6\snappy-java-1.1.1.6.jar
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=C:\Program Files\Java\jdk1.8.0_91\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Lenovo\Fingerprint Manager Pro\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\weizhenjin\AppData\Local\Programs\Python\Python35\;D:\软件\maven\apache-maven-3.3.9\bin\;D:\software\eclipse\eclipse-jee-mars-2-win32-x86_64\eclipse;;.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\WEIZHE~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 7
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.1
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.name=weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\weizhenjin
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.dir=D:\dev\git\kafka-storm
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@4c15e7fd
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:9089
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:9089
+INFO SyncThread:0 org.apache.zookeeper.server.persistence.FileTxnLog - Creating new log file: log.24
+INFO SyncThread:0 org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1549f80db820000 with negotiated timeout 6000 for client /127.0.0.1:9089
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x1549f80db820000, negotiated timeout = 6000
+INFO main-EventThread org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+INFO main kafka.log.LogManager - Loading logs.
+INFO main kafka.log.LogManager - Logs loading complete.
+INFO main kafka.log.LogManager - Starting log cleanup with a period of 300000 ms.
+INFO main kafka.log.LogManager - Starting log flusher with a default period of 9223372036854775807 ms.
+INFO main kafka.network.Acceptor - Awaiting socket connections on localhost:9001.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9001], Started
+INFO main kafka.utils.Mx4jLoader$ - Will not load MX4J, mx4j-tools.jar is not in the classpath
+INFO main kafka.controller.KafkaController - [Controller 9001]: Controller starting up
+INFO main kafka.server.ZookeeperLeaderElector - 9001 successfully elected as leader
+INFO main kafka.controller.KafkaController - [Controller 9001]: Broker 9001 starting become controller state transition
+INFO main kafka.controller.KafkaController - [Controller 9001]: Initialized controller epoch to 3 and zk version 2
+INFO main kafka.controller.KafkaController - [Controller 9001]: Controller 9001 incremented epoch to 4
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions undergoing preferred replica election: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions that completed preferred replica election: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Resuming preferred replica election for partitions: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions being reassigned: Map()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Partitions already reassigned: List()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Resuming reassignment of partitions: Map()
+INFO main kafka.controller.KafkaController - [Controller 9001]: List of topics to be deleted: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: List of topics ineligible for deletion: 
+INFO main kafka.controller.KafkaController - [Controller 9001]: Currently active brokers in the cluster: Set()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Currently shutting brokers in the cluster: Set()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Current list of topics in the cluster: Set()
+INFO main kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9001]: Started replica state machine with initial state -> Map()
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Started partition state machine with initial state -> Map()
+INFO main kafka.controller.KafkaController - [Controller 9001]: Broker 9001 is ready to serve as the new controller with epoch 4
+INFO main kafka.controller.KafkaController - [Controller 9001]: Starting preferred replica leader election for partitions 
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Invoking state change to OnlinePartition for partitions 
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f80db820000 type:delete cxid:0x1b zxid:0x27 txntype:-1 reqpath:n/a Error Path:/admin/preferred_replica_election Error:KeeperErrorCode = NoNode for /admin/preferred_replica_election
+INFO main kafka.controller.KafkaController - [Controller 9001]: starting the partition rebalance scheduler
+INFO main kafka.controller.KafkaController - [Controller 9001]: Controller startup complete
+INFO main kafka.utils.ZkUtils$ - Registered broker 9001 at path /brokers/ids/9001 with address localhost:9001.
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], started
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9002
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9002
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9002
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to localhost:2181
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], Connecting to zookeeper on localhost:2181
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@524d6d96
+INFO ZkClient-EventThread-43-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 0:0:0:0:0:0:0:1/0:0:0:0:0:0:0:1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO ZkClient-EventThread-16-localhost:2181 kafka.server.ZookeeperLeaderElector$LeaderChangeListener - New leader is 9001
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9001
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: 9001, deleted brokers: , all live brokers: 9001
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Controller 9001 connected to id:9001,host:localhost,port:9001 for sending state change requests
+INFO Controller-9001-to-broker-9001-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Starting 
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: New broker startup callback for 9001
+WARN main-SendThread(0:0:0:0:0:0:0:1:2181) org.apache.zookeeper.ClientCnxn - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:9104
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:9104
+INFO SyncThread:0 org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1549f80db820001 with negotiated timeout 6000 for client /127.0.0.1:9104
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x1549f80db820001, negotiated timeout = 6000
+INFO main-EventThread org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+INFO main kafka.log.LogManager - Loading logs.
+INFO main kafka.log.LogManager - Logs loading complete.
+INFO main kafka.log.LogManager - Starting log cleanup with a period of 300000 ms.
+INFO main kafka.log.LogManager - Starting log flusher with a default period of 9223372036854775807 ms.
+INFO main kafka.network.Acceptor - Awaiting socket connections on localhost:9002.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9002], Started
+INFO main kafka.utils.Mx4jLoader$ - Will not load MX4J, mx4j-tools.jar is not in the classpath
+INFO main kafka.controller.KafkaController - [Controller 9002]: Controller starting up
+INFO main kafka.controller.KafkaController - [Controller 9002]: Controller startup complete
+INFO main kafka.utils.ZkUtils$ - Registered broker 9002 at path /brokers/ids/9002 with address localhost:9002.
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], started
+INFO main kafka.utils.VerifiableProperties - Verifying properties
+INFO main kafka.utils.VerifiableProperties - Property broker.id is overridden to 9003
+INFO main kafka.utils.VerifiableProperties - Property host.name is overridden to localhost
+INFO main kafka.utils.VerifiableProperties - Property log.dir is overridden to D:\dev\git\kafka-storm\kafka_logs\borker9003
+INFO main kafka.utils.VerifiableProperties - Property port is overridden to 9003
+INFO main kafka.utils.VerifiableProperties - Property zookeeper.connect is overridden to localhost:2181
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], starting
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], Connecting to zookeeper on localhost:2181
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9001,9002
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@306cf3ea
+INFO ZkClient-EventThread-68-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Starting ZkClient event thread.
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:9115
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:9115
+INFO main-SendThread(127.0.0.1:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x1549f80db820002, negotiated timeout = 6000
+INFO SyncThread:0 org.apache.zookeeper.server.ZooKeeperServer - Established session 0x1549f80db820002 with negotiated timeout 6000 for client /127.0.0.1:9115
+INFO main-EventThread org.I0Itec.zkclient.ZkClient - zookeeper state changed (SyncConnected)
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: 9002, deleted brokers: , all live brokers: 9001,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Controller 9001 connected to id:9002,host:localhost,port:9002 for sending state change requests
+INFO Controller-9001-to-broker-9002-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Starting 
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: New broker startup callback for 9002
+INFO main kafka.log.LogManager - Loading logs.
+INFO main kafka.log.LogManager - Logs loading complete.
+INFO main kafka.log.LogManager - Starting log cleanup with a period of 300000 ms.
+INFO main kafka.log.LogManager - Starting log flusher with a default period of 9223372036854775807 ms.
+INFO main kafka.network.Acceptor - Awaiting socket connections on localhost:9003.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9003], Started
+INFO main kafka.utils.Mx4jLoader$ - Will not load MX4J, mx4j-tools.jar is not in the classpath
+INFO main kafka.controller.KafkaController - [Controller 9003]: Controller starting up
+INFO main kafka.controller.KafkaController - [Controller 9003]: Controller startup complete
+INFO main kafka.utils.ZkUtils$ - Registered broker 9003 at path /brokers/ids/9003 with address localhost:9003.
+INFO main kafka.server.KafkaServer - [Kafka Server 9003], started
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9003,9001,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: 9003, deleted brokers: , all live brokers: 9003,9001,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Controller 9001 connected to id:9003,host:localhost,port:9003 for sending state change requests
+INFO Controller-9001-to-broker-9003-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Starting 
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: New broker startup callback for 9003
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shutting down
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Starting controlled shutdown
+INFO kafka-request-handler-4 kafka.controller.KafkaController - [Controller 9001]: Shutting down broker 9001
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], Controlled shutdown succeeded
+INFO main kafka.utils.ZkUtils$ - Deregistered broker 9001 at path /brokers/ids/9001.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9001], Shutting down
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Broker change listener fired for path /brokers/ids with children 9003,9002
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9001], Shutdown completed
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9001], shutting down
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9001], shut down completely
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.ReplicaStateMachine$BrokerChangeListener - [BrokerChangeListener on Controller 9001]: Newly added brokers: , deleted brokers: 9001, all live brokers: 9003,9002
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Shutting down
+INFO Controller-9001-to-broker-9001-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Stopped 
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.RequestSendThread - [Controller-9001-to-broker-9001-send-thread], Shutdown completed
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: Broker failure callback for 9001
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.KafkaController - [Controller 9001]: Removed ArrayBuffer(9001) from list of shutting down brokers.
+INFO ZkClient-EventThread-16-localhost:2181 kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Invoking state change to OfflinePartition for partitions 
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9001]: Shut down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9001] shutting down
+INFO main kafka.server.ReplicaFetcherManager - [ReplicaFetcherManager on broker 9001] shutdown completed
+INFO main kafka.server.ReplicaManager - [Replica Manager on Broker 9001]: Shut down completely
+INFO main kafka.log.LogManager - Shutting down.
+INFO main kafka.log.LogManager - Shutdown complete.
+INFO main kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9001]: Stopped partition state machine
+INFO main kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9001]: Stopped replica state machine
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Shutting down
+INFO Controller-9001-to-broker-9003-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Stopped 
+INFO kafka-network-thread-9003-0 kafka.network.Processor - Closing socket connection to /127.0.0.1.
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9003-send-thread], Shutdown completed
+INFO kafka-network-thread-9002-0 kafka.network.Processor - Closing socket connection to /127.0.0.1.
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Shutting down
+INFO Controller-9001-to-broker-9002-send-thread kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Stopped 
+INFO main kafka.controller.RequestSendThread - [Controller-9001-to-broker-9002-send-thread], Shutdown completed
+INFO ZkClient-EventThread-16-localhost:2181 org.I0Itec.zkclient.ZkEventThread - Terminate ZkClient event thread.
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1549f80db820000
+INFO NIOServerCxn.Factory:localhost/127.0.0.1:2181 org.apache.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:9089 which had sessionid 0x1549f80db820000
+INFO main org.apache.zookeeper.ZooKeeper - Session: 0x1549f80db820000 closed
+INFO main-EventThread org.apache.zookeeper.ClientCnxn - EventThread shut down
+INFO main kafka.server.KafkaServer - [Kafka Server 9001], shut down completed
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], shutting down
+INFO main kafka.server.KafkaServer - [Kafka Server 9002], Starting controlled shutdown
+WARN main kafka.utils.Utils$ - Controller doesn't exist
+kafka.common.KafkaException: Controller doesn't exist
+	at kafka.utils.ZkUtils$.getController(ZkUtils.scala:67)
+	at kafka.server.KafkaServer.kafka$server$KafkaServer$$controlledShutdown(KafkaServer.scala:194)
+	at kafka.server.KafkaServer$$anonfun$shutdown$1.apply$mcV$sp(KafkaServer.scala:269)
+	at kafka.utils.Utils$.swallow(Utils.scala:172)
+	at kafka.utils.Logging$class.swallowWarn(Logging.scala:92)
+	at kafka.utils.Utils$.swallowWarn(Utils.scala:45)
+	at kafka.utils.Logging$class.swallow(Logging.scala:94)
+	at kafka.utils.Utils$.swallow(Utils.scala:45)
+	at kafka.server.KafkaServer.shutdown(KafkaServer.scala:269)
+	at kafka.server.KafkaServerStartable.shutdown(KafkaServerStartable.scala:42)
+	at com.hibigdata.kafka.MiniKafkaCluster.shutdown(MiniKafkaCluster.java:45)
+	at com.hibigdata.kafka.MiniKafkaCluster.main(MiniKafkaCluster.java:64)
+INFO ZkClient-EventThread-68-localhost:2181 kafka.server.ZookeeperLeaderElector - 9003 successfully elected as leader
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Broker 9003 starting become controller state transition
+INFO ProcessThread(sid:0 cport:-1): org.apache.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1549f80db820001 type:create cxid:0x13 zxid:0x30 txntype:-1 reqpath:n/a Error Path:/controller Error:KeeperErrorCode = NodeExists for /controller
+INFO main kafka.utils.ZkUtils$ - Deregistered broker 9002 at path /brokers/ids/9002.
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9002], Shutting down
+INFO main kafka.network.SocketServer - [Socket Server on Broker 9002], Shutdown completed
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9002], shutting down
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Initialized controller epoch to 4 and zk version 3
+INFO ZkClient-EventThread-43-localhost:2181 kafka.utils.ZkUtils$ - conflict in /controller data: {"version":1,"brokerid":9002,"timestamp":"1462964920399"} stored data: {"version":1,"brokerid":9003,"timestamp":"1462964920398"}
+INFO main kafka.server.KafkaRequestHandlerPool - [Kafka Request Handler on Broker 9002], shut down completely
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Controller 9003 incremented epoch to 5
+INFO ZkClient-EventThread-43-localhost:2181 kafka.server.ZookeeperLeaderElector$LeaderChangeListener - New leader is 9003
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.RequestSendThread - [Controller-9003-to-broker-9003-send-thread], Controller 9003 connected to id:9003,host:localhost,port:9003 for sending state change requests
+INFO Controller-9003-to-broker-9003-send-thread kafka.controller.RequestSendThread - [Controller-9003-to-broker-9003-send-thread], Starting 
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions undergoing preferred replica election: 
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions that completed preferred replica election: 
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Resuming preferred replica election for partitions: 
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions being reassigned: Map()
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Partitions already reassigned: List()
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Resuming reassignment of partitions: Map()
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: List of topics to be deleted: 
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: List of topics ineligible for deletion: 
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Currently active brokers in the cluster: Set(9003)
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Currently shutting brokers in the cluster: Set()
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.KafkaController - [Controller 9003]: Current list of topics in the cluster: Set()
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.ReplicaStateMachine - [Replica state machine on controller 9003]: Started replica state machine with initial state -> Map()
+INFO ZkClient-EventThread-68-localhost:2181 kafka.controller.PartitionStateMachine - [Partition state machine on Controller 9003]: Started partition state machine with initial state -> Map()
