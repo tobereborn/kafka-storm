@@ -3,3 +3,6 @@
 .project
 /target/
 /kafka_logs/
+/zk/
+/example.log
+/example.log.1

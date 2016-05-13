@@ -1,12 +1,17 @@
-package com.hibigdata.kafka;
+package com.github.tbr.kafka;
+
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_HOST_NAME;
+import static com.github.tbr.kafka.util.ClusterConstants.KAFKA_BROKER_ID;
+import static com.github.tbr.kafka.util.ClusterConstants.KAFKA_HOST_NAME;
+import static com.github.tbr.kafka.util.ClusterConstants.KAFKA_LOG_DIR;
+import static com.github.tbr.kafka.util.ClusterConstants.KAFKA_PORT;
+import static com.github.tbr.kafka.util.ClusterConstants.KAFKA_ZK_CONNECT;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -17,12 +22,6 @@ import kafka.server.KafkaServerStartable;
 
 public class MiniKafkaCluster {
 	private static final Logger LOG = LoggerFactory.getLogger(MiniKafkaCluster.class);
-	private static final String ZK_CONNECT = "zookeeper.connect";
-	private static final String BROKER_ID = "broker.id";
-	private static final String HOST_NAME = "host.name";
-	private static final String DEFAULT_HOST_NAME = "localhost";
-	private static final String PORT = "port";
-	private static final String LOG_DIR = "log.dir";
 
 	private final String zkConnect;
 	private final List<Integer> clientPorts;
@@ -57,11 +56,11 @@ public class MiniKafkaCluster {
 			throw new RuntimeException(e);
 		}
 
-		props.put(ZK_CONNECT, zkConnect);
-		props.put(BROKER_ID, port.toString());
-		props.put(HOST_NAME, DEFAULT_HOST_NAME);
-		props.put(PORT, port.toString());
-		props.put(LOG_DIR, logDir.getAbsolutePath());
+		props.put(KAFKA_ZK_CONNECT, zkConnect);
+		props.put(KAFKA_BROKER_ID, port.toString());
+		props.put(KAFKA_HOST_NAME, DEFAULT_HOST_NAME);
+		props.put(KAFKA_PORT, port.toString());
+		props.put(KAFKA_LOG_DIR, logDir.getAbsolutePath());
 		return props;
 	}
 
@@ -79,25 +78,4 @@ public class MiniKafkaCluster {
 		LOG.info("All brokers shut down.");
 	}
 
-	public static void main(String[] args) {
-		MiniKafkaCluster cluster = null;
-		MiniZooKeeperStandalone zookeeper = null;
-		try {
-			zookeeper = new MiniZooKeeperStandalone(new File("target/zookeeper"));
-			cluster = new MiniKafkaCluster("localhost:2181", new File("target/kafka"),
-					Arrays.asList(new Integer[] { 9001, 9002, 9003 }));
-			zookeeper.startup();
-			cluster.startup();
-			TimeUnit.SECONDS.sleep(5);
-		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
-		} finally {
-			if (cluster != null) {
-				cluster.shutdown();
-			}
-			if (zookeeper != null) {
-				zookeeper.shutdown();
-			}
-		}
-	}
 }

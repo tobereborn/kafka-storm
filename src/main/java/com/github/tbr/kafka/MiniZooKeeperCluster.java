@@ -1,10 +1,14 @@
-package com.hibigdata.kafka;
+package com.github.tbr.kafka;
+
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_CONNECTION_TIMEOUT;
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_MAX_CLENT_CNXNS;
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_TICK_TIME;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.InterruptedIOException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.InterruptedIOException;
 import java.io.OutputStream;
 import java.io.Reader;
 import java.net.BindException;
@@ -22,10 +26,6 @@ import org.slf4j.LoggerFactory;
 
 public class MiniZooKeeperCluster {
 	private static final Logger LOG = LoggerFactory.getLogger(MiniZooKeeperCluster.class);
-
-	private static final int TICK_TIME = 2000;
-	private static final int DEFAULT_CONNECTION_TIMEOUT = 30000;
-	private static final int DEFAULT_ZOOKEEPER_MAX_CLIENT_CNXNS = 1000;
 	private int connectionTimeout;
 
 	private boolean started;
@@ -46,7 +46,7 @@ public class MiniZooKeeperCluster {
 		zooKeeperServers = new ArrayList<ZooKeeperServer>();
 		clientPortList = new ArrayList<Integer>();
 		standaloneServerFactoryList = new ArrayList<NIOServerCnxnFactory>();
-		connectionTimeout = DEFAULT_CONNECTION_TIMEOUT;
+		connectionTimeout = DEFAULT_ZK_CONNECTION_TIMEOUT;
 	}
 
 	/**
@@ -183,7 +183,7 @@ public class MiniZooKeeperCluster {
 			if (this.tickTime > 0) {
 				tickTimeToUse = this.tickTime;
 			} else {
-				tickTimeToUse = TICK_TIME;
+				tickTimeToUse = DEFAULT_ZK_TICK_TIME;
 			}
 
 			// Set up client port - if we have already had a list of valid
@@ -202,7 +202,7 @@ public class MiniZooKeeperCluster {
 				try {
 					standaloneServerFactory = new NIOServerCnxnFactory();
 					standaloneServerFactory.configure(new InetSocketAddress(currentClientPort),
-							DEFAULT_ZOOKEEPER_MAX_CLIENT_CNXNS);
+							DEFAULT_ZK_MAX_CLENT_CNXNS);
 				} catch (BindException e) {
 					LOG.debug("Failed binding ZK Server to client port: " + currentClientPort, e);
 					// We're told to use some port but it's occupied, fail

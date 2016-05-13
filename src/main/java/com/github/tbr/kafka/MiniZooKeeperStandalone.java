@@ -1,4 +1,11 @@
-package com.hibigdata.kafka;
+package com.github.tbr.kafka;
+
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_HOST_NAME;
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_LOG_DIR;
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_MAX_CLENT_CNXNS;
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_PORT;
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_SNAPSHOT_DIR;
+import static com.github.tbr.kafka.util.ClusterConstants.DEFAULT_ZK_TICK_TIME;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,12 +19,7 @@ import org.slf4j.LoggerFactory;
 
 public class MiniZooKeeperStandalone {
 	private static final Logger LOG = LoggerFactory.getLogger(MiniZooKeeperStandalone.class);
-	private static final int DEFAULT_TICK_TIME = 500;
-	private static final int DEFAULT_PORT = 2181;
-	private static final int DEFAULT_MAX_CLENT_CNXNS = 1000;
-	private static final String DEFAULT_HOST_NAME = "localhost";
-	private static final String DEFAULT_SNAPSHOT_DIR = "snapshots";
-	private static final String DEFAULT_LOG_DIR = "logs";
+	private final String hostName;
 	private final int port;
 	private final int tickTime;
 	private final File baseDir;
@@ -26,15 +28,16 @@ public class MiniZooKeeperStandalone {
 	private ServerCnxnFactory factory;
 
 	public MiniZooKeeperStandalone(File baseDir) {
-		this(baseDir, DEFAULT_PORT, DEFAULT_TICK_TIME);
+		this(baseDir, DEFAULT_HOST_NAME, DEFAULT_ZK_PORT, DEFAULT_ZK_TICK_TIME);
 	}
 
-	public MiniZooKeeperStandalone(File baseDir, int port, int tickTime) {
+	public MiniZooKeeperStandalone(File baseDir, String hostName, int port, int tickTime) {
 		this.baseDir = baseDir;
+		this.hostName = hostName;
 		this.port = port;
 		this.tickTime = tickTime;
-		this.logDir = new File(baseDir, DEFAULT_LOG_DIR);
-		this.snapshotDir = new File(baseDir, DEFAULT_SNAPSHOT_DIR);
+		this.logDir = new File(baseDir, DEFAULT_ZK_LOG_DIR);
+		this.snapshotDir = new File(baseDir, DEFAULT_ZK_SNAPSHOT_DIR);
 		validate(logDir);
 		validate(snapshotDir);
 	}
@@ -70,7 +73,7 @@ public class MiniZooKeeperStandalone {
 		try {
 			ZooKeeperServer zkServer = new ZooKeeperServer(snapshotDir, logDir, tickTime);
 			this.factory = ServerCnxnFactory.createFactory();
-			this.factory.configure(new InetSocketAddress(DEFAULT_HOST_NAME, port), DEFAULT_MAX_CLENT_CNXNS);
+			this.factory.configure(new InetSocketAddress(hostName, port), DEFAULT_ZK_MAX_CLENT_CNXNS);
 			this.factory.startup(zkServer);
 		} catch (IOException e) {
 			LOG.error("Could not start zookeeper server");
