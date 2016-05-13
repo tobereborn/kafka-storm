@@ -1,4 +1,4 @@
-package com.hibigdata.kafka.producer;
+package com.github.tbr.kafka.consumer;
 
 /**
  * Hello world!

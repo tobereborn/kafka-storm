@@ -1,4 +1,4 @@
-package com.hibigdata.kafka;
+package com.github.tbr.kafka;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
