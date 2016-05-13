@@ -1,64 +1,96 @@
 package com.hibigdata.kafka;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import com.hibigdata.kafka.util.FileUtils;
+import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import kafka.server.KafkaConfig;
 import kafka.server.KafkaServerStartable;
 
 public class MiniKafkaCluster {
-	private static final File LOG_DIR = new File("kafka_logs");
-	private String zk;
-	private List<Integer> ports = new ArrayList<Integer>();
-	private List<KafkaServerStartable> brokers = new ArrayList<KafkaServerStartable>();
+	private static final Logger LOG = LoggerFactory.getLogger(MiniKafkaCluster.class);
+	private static final String ZK_CONNECT = "zookeeper.connect";
+	private static final String BROKER_ID = "broker.id";
+	private static final String HOST_NAME = "host.name";
+	private static final String DEFAULT_HOST_NAME = "localhost";
+	private static final String PORT = "port";
+	private static final String LOG_DIR = "log.dir";
 
-	public MiniKafkaCluster(String zk, List<Integer> ports) {
-		this.zk = zk;
-		this.ports.addAll(ports);
+	private final String zkConnect;
+	private final List<Integer> clientPorts;
+	private final List<KafkaServerStartable> brokers;
+	private final File baseDir;
+
+	public MiniKafkaCluster(String zkConnect, File baseDir, List<Integer> clientPorts) {
+		this.zkConnect = zkConnect;
+		this.clientPorts = new ArrayList<Integer>(clientPorts);
+		this.brokers = new ArrayList<KafkaServerStartable>();
+		this.baseDir = baseDir;
 	}
 
 	public void startup() {
-		for (Integer port : ports) {
-			File brokerLogDir = FileUtils.mkdir(LOG_DIR, "borker" + port);
-			Properties props = new Properties();
-			props.put("zookeeper.connect", zk);
-			props.put("broker.id", port.toString());
-			props.put("host.name", "localhost");
-			props.put("port", port.toString());
-			props.put("log.dir", brokerLogDir.getAbsolutePath());
-			KafkaServerStartable broker = new KafkaServerStartable(new KafkaConfig(props));
-			System.out.println("Start broker @" + "localhost:" + port);
+		LOG.info("Starting brokers...");
+		for (Integer port : clientPorts) {
+			KafkaServerStartable broker = new KafkaServerStartable(new KafkaConfig(brokerProps(port)));
 			broker.startup();
-			System.out.println("Start broker @" + "localhost:" + port);
 			brokers.add(broker);
 		}
+		LOG.info("All brokers started");
+	}
+
+	private Properties brokerProps(Integer port) {
+		Properties props = new Properties();
+		String brokerName = "broker_" + port;
+		File logDir = new File(baseDir, brokerName);
+		try {
+			FileUtils.forceMkdir(logDir);
+		} catch (IOException e) {
+			LOG.error("Could not create log dir {}", logDir.getAbsolutePath());
+			throw new RuntimeException(e);
+		}
+
+		props.put(ZK_CONNECT, zkConnect);
+		props.put(BROKER_ID, port.toString());
+		props.put(HOST_NAME, DEFAULT_HOST_NAME);
+		props.put(PORT, port.toString());
+		props.put(LOG_DIR, logDir.getAbsolutePath());
+		return props;
 	}
 
 	public void shutdown() {
+		LOG.info("Shuting down brokers...");
 		for (KafkaServerStartable broker : brokers) {
 			broker.shutdown();
-			System.out.println("Shutdown broker " + broker);
 		}
-		FileUtils.remove(LOG_DIR);
+		try {
+			FileUtils.deleteDirectory(baseDir);
+		} catch (IOException e) {
+			LOG.error("Could not delete base directory: {}", baseDir.getAbsolutePath());
+			throw new RuntimeException(e);
+		}
+		LOG.info("All brokers shut down.");
 	}
 
 	public static void main(String[] args) {
 		MiniKafkaCluster cluster = null;
-		MiniZookeeper zookeeper = null;
+		MiniZooKeeperStandalone zookeeper = null;
 		try {
-			zookeeper = new MiniZookeeper();
-			cluster = new MiniKafkaCluster("localhost:2181", Arrays.asList(new Integer[] { 9001, 9002, 9003 }));
+			zookeeper = new MiniZooKeeperStandalone(new File("target/zookeeper"));
+			cluster = new MiniKafkaCluster("localhost:2181", new File("target/kafka"),
+					Arrays.asList(new Integer[] { 9001, 9002, 9003 }));
 			zookeeper.startup();
 			cluster.startup();
-			TimeUnit.SECONDS.sleep(30);
+			TimeUnit.SECONDS.sleep(5);
 		} catch (InterruptedException e) {
-
+			Thread.currentThread().interrupt();
 		} finally {
 			if (cluster != null) {
 				cluster.shutdown();
